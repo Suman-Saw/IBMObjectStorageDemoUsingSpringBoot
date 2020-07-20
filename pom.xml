@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.2.6.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.napster</groupId>
+	<artifactId>objectstoragedemo</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>objectstoragedemo</name>
+	<description>Demo project for Spring Boot</description>
+
+	<properties>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-slf4j-impl</artifactId>
+			<version>2.12.0</version>
+		</dependency>
+
+		<!-- Object Storage START -->
+		<dependency>
+			<groupId>com.ibm.cos</groupId>
+			<artifactId>ibm-cos-java-sdk</artifactId>
+			<version>1.0.2</version>
+		</dependency>
+		<dependency>
+			<artifactId>ibm-cos-java-sdk-kms</artifactId>
+			<groupId>com.ibm.cos</groupId>
+			<optional>false</optional>
+			<version>1.0.1</version>
+		</dependency>
+		<dependency>
+			<artifactId>ibm-cos-java-sdk-core</artifactId>
+			<groupId>com.ibm.cos</groupId>
+			<optional>false</optional>
+			<version>1.0.1</version>
+		</dependency>
+		<dependency>
+			<artifactId>ibm-cos-java-sdk-test-utils</artifactId>
+			<groupId>com.ibm.cos</groupId>
+			<optional>false</optional>
+			<scope>test</scope>
+			<version>1.0.1</version>
+		</dependency>
+		<!-- Object Storage END -->
+
+
+
+
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>org.junit.vintage</groupId>
+					<artifactId>junit-vintage-engine</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.16.22</version>
+		</dependency>
+		<dependency>
+			<groupId>com.googlecode.json-simple</groupId>
+			<artifactId>json-simple</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.5</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.8.5</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
